@@ -16,6 +16,11 @@ const transactionRoutes = require('./routes/transacion.routes');
 
 
 // use Routes
+
+app.get("/",(req,res)=>{
+    res.send("ledger server is running");
+})
+
 app.use("/api/auth",authRoutes);
  app.use("/api/accounts",accountRoutes);
  app.use("/api/transactions",transactionRoutes);
